@@ -38,12 +38,6 @@ fun SplashScreen(navController: NavController) {
                     .padding(bottom = 24.dp)
             )
 
-            // Display splash screen text in white
-            Text(
-                text = "Welcome to the Quiz App!",
-                fontSize = 32.sp,
-                color = Color.White
-            )
 
             Spacer(modifier = Modifier.height(32.dp))
 
