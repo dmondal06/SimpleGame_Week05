@@ -65,7 +65,7 @@ fun QuizApp(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.Black)  // Set background color to black
+            .background(Color.Black)
     ) {
         // Navigation between different screens
         NavHost(navController = navController, startDestination = "question/0") {
