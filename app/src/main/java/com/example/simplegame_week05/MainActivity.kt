@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
 
-            // Setup the NavHost for both the splash screen and quiz navigation
+            //  NavHost setup for both the splash screen and quiz navigation
             NavHost(navController = navController, startDestination = "splash") {
                 // Splash screen route
                 composable("splash") {
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
 
                 // Quiz route that launches the quiz questions
                 composable("quiz") {
-                    QuizApp()  // Launches the QuizApp once Start Now is clicked
+                    QuizApp()  // this launches the QuizApp once Start Now is clicked
                 }
             }
         }
