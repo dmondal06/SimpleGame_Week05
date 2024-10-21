@@ -61,7 +61,7 @@ fun QuizApp(modifier: Modifier = Modifier) {
     )
 
 
-    // Box to fill the screen and apply any necessary modifiers, including black background
+    // This fills the screen and apply any necessary modifiers, including black background
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -69,7 +69,7 @@ fun QuizApp(modifier: Modifier = Modifier) {
     ) {
         // Navigation between different screens
         NavHost(navController = navController, startDestination = "question/0") {
-            // Dynamically load question screens by index
+            // This dynamically load question screens by index
             questions.forEachIndexed { index, _ ->
                 composable("question/$index") {
                     QuestionScreen(
@@ -78,7 +78,7 @@ fun QuizApp(modifier: Modifier = Modifier) {
                         nextRoute = if (index == questions.size - 1) "stats" else "question/${index + 1}",
                         currentScore = score,  // Pass the current score
                         updateScore = { isCorrect ->
-                            if (isCorrect) score += 1  // Increment score if correct
+                            if (isCorrect) score += 1  // Increments score if correct
                         }
                     )
                 }

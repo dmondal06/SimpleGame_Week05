@@ -30,7 +30,7 @@ fun StatsScreen(navController: NavController, finalScore: Int, totalQuestions: I
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Display the final score
+        // Displays the final score
         Text(
             text = "You answered $finalScore/$totalQuestions questions correctly!",
             fontSize = 20.sp,
