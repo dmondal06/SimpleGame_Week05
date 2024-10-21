@@ -32,7 +32,7 @@ fun QuestionScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Display the current score
+        // Displays the current score
         Text(
             text = "Score: $currentScore",
             fontSize = 24.sp,
@@ -40,8 +40,7 @@ fun QuestionScreen(
         )
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        // Display the question text in white
+        //text
         Text(
             text = question.questionText,
             fontSize = 20.sp,
@@ -50,7 +49,7 @@ fun QuestionScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Display each option as a RadioButton with white text
+       //Radiobutton
         question.options.forEachIndexed { index, option ->
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -86,10 +85,10 @@ fun QuestionScreen(
                 if (selectedOption == -1) {
                     showError = true
                 } else {
-                    // Check if the selected option is correct
+                    // Checks if the selected option is correct
                     isCorrect = selectedOption == question.correctAnswerIndex
-                    updateScore(isCorrect)  // Update the score if correct
-                    showDialog = true  // Show the popup dialog
+                    updateScore(isCorrect)  // Updates the score if correct
+                    showDialog = true  // Shows the popup dialog
                 }
             },
             modifier = Modifier.align(Alignment.CenterHorizontally)

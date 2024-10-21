@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
 
                 // Quiz route that launches the quiz questions
                 composable("quiz") {
-                    QuizApp()  // Launch the QuizApp once Start Now is clicked
+                    QuizApp()  // Launches the QuizApp once Start Now is clicked
                 }
             }
         }

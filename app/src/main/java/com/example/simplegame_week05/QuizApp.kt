@@ -15,44 +15,51 @@ fun QuizApp(modifier: Modifier = Modifier) {
     val navController = rememberNavController()
     var score by remember { mutableStateOf(0) }  // Track the score
 
-    // Define a list of questions for the quiz
+    // This defines a list of questions for the quiz
     val questions = listOf(
         Question(
-            questionText = "What animal is Walt Disney's Dumbo?",
-            options = listOf("Deer", "Rabbit", "Elephant", "Donkey"),
-            correctAnswerIndex = 2
+            questionText = "Which animal can hold its breath the longest?",
+            options = listOf("Elephant", "Dolphin", "Sea Turtle", "Sperm Whale"),
+            correctAnswerIndex = 3
         ),
+
         Question(
-            questionText = "Which is the largest planet in our solar system?",
-            options = listOf("Earth", "Mars", "Jupiter", "Saturn"),
-            correctAnswerIndex = 2
-        ),
-        Question(
-            questionText = "Who wrote 'To Kill a Mockingbird'?",
-            options = listOf("Harper Lee", "Mark Twain", "J.K. Rowling", "Charles Dickens"),
-            correctAnswerIndex = 0
-        ),
-        Question(
-            questionText = "What is the capital of Australia?",
-            options = listOf("Sydney", "Melbourne", "Canberra", "Brisbane"),
-            correctAnswerIndex = 2
-        ),
-        Question(
-            questionText = "What is the smallest prime number?",
-            options = listOf("1", "2", "3", "5"),
+            questionText = "If you have 3 apples and you take away 2, how many apples do you have?",
+            options = listOf("1", "2", "3", "0"),
             correctAnswerIndex = 1
         ),
+
         Question(
-            questionText = "Which element has the chemical symbol 'O'?",
-            options = listOf("Oxygen", "Gold", "Hydrogen", "Iron"),
-            correctAnswerIndex = 0
+            questionText = "Which is heavier, a pound of feathers or a pound of bricks?",
+            options = listOf("Feathers", "Bricks", "They weigh the same", "Depends on the wind"),
+            correctAnswerIndex = 2
         ),
+
         Question(
-            questionText = "Which country is home to the kangaroo?",
-            options = listOf("Australia", "New Zealand", "South Africa", "Canada"),
-            correctAnswerIndex = 0
+            questionText = "Which planet in our solar system could float in water?",
+            options = listOf("Earth", "Saturn", "Mars", "Jupiter"),
+            correctAnswerIndex = 1
+        ),
+
+        Question(
+            questionText = "How many months have 28 days?",
+            options = listOf("1", "12", "6", "Depends on the year"),
+            correctAnswerIndex = 1
+        ),
+
+        Question(
+            questionText = "What is the only letter not in any U.S. state name?",
+            options = listOf("Z", "X", "Q", "J"),
+            correctAnswerIndex = 2
+        ),
+
+        Question(
+            questionText = "What happens if you throw a blue stone into the Red Sea?",
+            options = listOf("It floats", "It sinks", "It turns red", "It disappears"),
+            correctAnswerIndex = 1
         )
     )
+
 
     // Box to fill the screen and apply any necessary modifiers, including black background
     Box(
